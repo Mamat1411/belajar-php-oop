@@ -5,7 +5,7 @@ class Data implements IteratorAggregate
     var string $first = "First";
     public string $second = "Second";
     private string $third = "Third";
-    protected string $forth = "Forth";
+    protected string $fourth = "fourth";
 
 //    public function getIterator()
 //    {
@@ -13,18 +13,18 @@ class Data implements IteratorAggregate
 //            "first" => $this->first,
 //            "second" => $this->second,
 //            "third" => $this->third,
-//            "forth" => $this->forth,
+//            "fourth" => $this->fourth,
 //        ];
 //
 //        return new ArrayIterator($array);
 //    }
 
-    public function getIterator()
+    public function getIterator(): Iterator
     {
         yield "first" => $this->first;
         yield "second" => $this->second;
         yield "third" => $this->third;
-        yield "forth" => $this->forth;
+        yield "fourth" => $this->fourth;
     }
 }
 
